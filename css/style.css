@@ -60,6 +60,7 @@ header h1 {
 .circle {
   z-index: 2;
   width: 7rem;
+  height: 7rem;
   aspect-ratio: 1 / 1;
   aspect-ratio: 1;
   background: radial-gradient(
@@ -245,6 +246,7 @@ a:hover {
   }
   .circle {
     width: 10rem;
+    height: 10rem;
   }
   .rulesList {
     width: 30rem;
