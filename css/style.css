@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-user-select: none; /* Chrome all / Safari all */
+  -moz-user-select: none; /* Firefox all */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.1rem;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+}
+body {
+  background: radial-gradient(
+    circle at top,
+    hsl(214, 47%, 23%) 0%,
+    hsl(237, 49%, 15%) 100%
+  );
+  height: 100vh;
+  width: 100vw;
+  max-height: 100vh;
+  padding: 2rem;
+}
+main {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  height: 100vh;
+}
+header {
+  border: 0.2rem solid hsl(217, 16%, 45%);
+  width: 90%;
+}
+header h1 {
+  line-height: 1.1rem;
+  text-transform: uppercase;
+}
+.score {
+  color: hsl(229, 25%, 31%);
+  text-transform: uppercase;
+  padding: 0.5rem 1.5rem;
+}
+.score p {
+  font-size: 0.8rem;
+}
+.score h1 {
+  font-size: 2.5rem;
+}
+.hide {
+  display: none !important;
+}
+.circle {
+  z-index: 2;
+  width: 40%;
+  aspect-ratio: 1/1;
+  background: radial-gradient(
+    circle at top,
+    hsl(230, 89%, 62%) 0%,
+    hsl(230, 89%, 65%) 100%
+  );
+  box-shadow: 0px 0.4rem 0.1rem -0.1rem hsl(230, 89%, 55%);
+  filter: drop-shadow(0px 0.3rem 0.1rem rgba(0, 0, 0, 0.2));
+}
+.circle:hover {
+  cursor: pointer;
+}
+.yellow {
+  background: radial-gradient(
+    circle at top,
+    hsl(39, 89%, 49%) 0%,
+    hsl(40, 84%, 53%) 100%
+  );
+  box-shadow: 0px 0.4rem 0.1rem -0.1rem hsl(40, 84%, 35%);
+}
+.red {
+  background: radial-gradient(
+    circle at top,
+    hsl(349, 71%, 52%) 0%,
+    hsl(349, 70%, 56%) 100%
+  );
+  box-shadow: 0px 0.4rem 0.1rem -0.1rem hsl(349, 70%, 35%);
+}
+.innerCircle {
+  background-color: white;
+  width: 78%;
+  aspect-ratio: 1/1;
+  box-shadow: inset 0px 0.5rem 0.1rem -0.1rem rgba(0, 0, 0, 0.2);
+}
+.rowOne {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.rowTwo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.stick {
+  position: absolute;
+  width: 60%;
+  height: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  right: 50%;
+  transform: translate(50%, -50%);
+  top: 50%;
+  z-index: 1;
+}
+.stick.right {
+  top: 100%;
+  right: 30%;
+  transform: translate(50%, -50%) rotate(-60deg);
+}
+.stick.left {
+  top: 100%;
+  left: -30%;
+  transform: translate(50%, -50%) rotate(60deg);
+}
+/*Result*/
+.result {
+  width: 100%;
+}
+.emptyCircle {
+  width: 40%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  scale: 0.9;
+}
+.choice {
+  width: 40%;
+}
+.choice .circle {
+  width: 100%;
+}
+.resultText {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding: 1rem;
+}
+.resultText h2 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin: 0;
+}
+.resultText h2:nth-child(2) {
+  transform: translateX(15%);
+}
+
+/*Final Result*/
+.finalResult {
+  width: fit-content;
+}
+.finalResult h1 {
+  color: white;
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+.playAgain {
+  border: 0.1rem solid white;
+  background-color: white;
+  width: 100%;
+}
+.playAgain a {
+  font-size: 1re;
+  text-transform: uppercase;
+  color: hsl(229, 25%, 31%);
+  width: 100%;
+}
+.playAgain:hover,
+a:hover {
+  color: white;
+  background-color: transparent;
+}
+.rules {
+  position: relative;
+  text-transform: uppercase;
+  padding: 0.5rem 3rem;
+  border: 0.1rem solid white;
+  margin-bottom: 1rem;
+}
+.rules:hover {
+  cursor: pointer;
+}
+.rulesList {
+  position: fixed;
+  z-index: 100;
+  background-color: white;
+  height: 100vh;
+  top: 0;
+  width: 100vw;
+  right: 0;
+  padding: 5rem;
+}
+.rulesList h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: hsl(229, 25%, 31%);
+  font-size: 2rem;
+}
+.close:hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  main {
+    max-width: 70vw;
+  }
+  header {
+    width: 130%;
+  }
+  header h1 {
+    line-height: 1.3rem;
+  }
+  .rules {
+    position: fixed;
+    bottom: 2rem;
+    right: 3rem;
+  }
+  .finalResult h1 {
+    margin-bottom: 2rem;
+  }
+  .dimmer {
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100vh;
+    top: 0;
+    width: 100vw;
+    right: 0;
+  }
+  .rulesList {
+    width: 30rem;
+    height: 30rem;
+    padding: 2rem;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    border-radius: 0.5rem;
+  }
+}

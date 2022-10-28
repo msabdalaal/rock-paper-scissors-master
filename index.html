@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Rock Paper Sissors</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="d-flex flex-column align-items-center justify-content-between">
+    <main
+      class="d-flex flex-column align-items-center justify-content-between justify-content-md-around justify-content-lg-around"
+    >
+      <div class="dimmer hide" onclick="hideRules()"></div>
+      <header
+        class="rounded p-2 fw-semibold text-light d-flex justify-content-between align-items-center"
+      >
+        <h1 class="w-25 fs-4 ps-3">Rock Paper Scissors</h1>
+        <div
+          class="score bg-light rounded d-flex flex-column align-items-center"
+        >
+          <p class="fw-light">Score</p>
+          <h1 id="score" class="fw-bold">0</h1>
+        </div>
+      </header>
+      <div class="game w-100 d-flex flex-row flex-wrap justify-content-center">
+        <div class="rowOne">
+          <div class="stick"></div>
+          <div class="stick right"></div>
+          <div class="stick left"></div>
+          <div
+            id="paper"
+            class="circle rounded-circle d-flex justify-content-center align-items-center"
+            onclick="choose(this.id)"
+          >
+            <div
+              class="innerCircle rounded-circle d-flex justify-content-center align-items-center"
+            >
+              <img src="./images/icon-paper.svg" alt="paper" />
+            </div>
+          </div>
+          <div
+            id="scissors"
+            onclick="choose(this.id)"
+            class="circle rounded-circle d-flex justify-content-center align-items-center yellow"
+          >
+            <div
+              class="innerCircle rounded-circle d-flex justify-content-center align-items-center"
+            >
+              <img src="./images/icon-scissors.svg" alt="scissors" />
+            </div>
+          </div>
+        </div>
+        <div class="rowTwo">
+          <div
+            id="rock"
+            onclick="choose(this.id)"
+            class="circle rounded-circle d-flex justify-content-center align-items-center red"
+          >
+            <div
+              class="innerCircle rounded-circle d-flex justify-content-center align-items-center"
+            >
+              <img src="./images/icon-rock.svg" alt="rock" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="result hide">
+        <div class="rowOne">
+          <div
+            name="paper"
+            class="circle rounded-circle d-flex justify-content-center align-items-center hide"
+          >
+            <div
+              class="innerCircle rounded-circle d-flex justify-content-center align-items-center"
+            >
+              <img src="./images/icon-paper.svg" alt="paper" />
+            </div>
+          </div>
+          <div
+            name="scissors"
+            class="circle rounded-circle d-flex justify-content-center align-items-center yellow hide"
+          >
+            <div
+              class="innerCircle rounded-circle d-flex justify-content-center align-items-center"
+            >
+              <img src="./images/icon-scissors.svg" alt="scissors" />
+            </div>
+          </div>
+          <div
+            name="rock"
+            class="circle rounded-circle d-flex justify-content-center align-items-center red hide"
+          >
+            <div
+              class="innerCircle rounded-circle d-flex justify-content-center align-items-center"
+            >
+              <img src="./images/icon-rock.svg" alt="rock" />
+            </div>
+          </div>
+          <div class="emptyCircle hide"></div>
+          <div class="choice hide">
+            <div
+              name="paperRes"
+              class="circle rounded-circle d-flex justify-content-center align-items-center hide"
+            >
+              <div
+                class="innerCircle rounded-circle d-flex justify-content-center align-items-center"
+              >
+                <img src="./images/icon-paper.svg" alt="paper" />
+              </div>
+            </div>
+            <div
+              name="scissorsRes"
+              class="circle rounded-circle d-flex justify-content-center align-items-center yellow hide"
+            >
+              <div
+                class="innerCircle rounded-circle d-flex justify-content-center align-items-center"
+              >
+                <img src="./images/icon-scissors.svg" alt="scissors" />
+              </div>
+            </div>
+            <div
+              name="rockRes"
+              class="circle rounded-circle d-flex justify-content-center align-items-center red hide"
+            >
+              <div
+                class="innerCircle rounded-circle d-flex justify-content-center align-items-center"
+              >
+                <img src="./images/icon-rock.svg" alt="rock" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="resultText">
+          <h2>You Picked</h2>
+          <h2>The House Picked</h2>
+        </div>
+      </div>
+      <div
+        class="finalResult d-flex flex-column justify-content-center align-items-center hide"
+      >
+        <h1>You Win</h1>
+        <div
+          class="playAgain d-flex justify-content-center align-items-center rounded"
+        >
+          <a
+            onclick="reset()"
+            class="fw-normal d-flex justify-content-center align-items-center pt-2 pb-2 w-100"
+            >Play Again</a
+          >
+        </div>
+      </div>
+      <div class="rules rounded" onclick="showRules()">
+        <a class="text-light fw-normal">Rules</a>
+      </div>
+      <div
+        class="rulesList d-flex flex-column justify-content-between align-items-center hide"
+        onclick="hideRules()"
+      >
+        <h1>Rules</h1>
+        <img src="./images/image-rules.svg" alt="rules" />
+        <img src="./images/icon-close.svg" alt="" class="close" />
+      </div>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
