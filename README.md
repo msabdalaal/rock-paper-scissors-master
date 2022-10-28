@@ -51,4 +51,4 @@ Users should be able to:
 ## Author
 
 - Frontend Mentor - [@msabdalaal](https://www.frontendmentor.io/profile/msabdalaal)
-- Twitter - [@msabdalaal](https://www.facebook.com/msabdalaal)
+- facebook - [@msabdalaal](https://www.facebook.com/msabdalaal)
