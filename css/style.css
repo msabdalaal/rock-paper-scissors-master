@@ -59,8 +59,8 @@ header h1 {
 }
 .circle {
   z-index: 2;
-  width: 6.5rem;
-  height: 6.5rem;
+  width: 7rem;
+  height: 7rem;
   background: radial-gradient(
     circle at top,
     hsl(230, 89%, 62%) 0%,
@@ -133,8 +133,8 @@ header h1 {
   width: 100%;
 }
 .emptyCircle {
-  width: 7rem;
-  height: 7rem;
+  width: 6.8rem;
+  height: 6.8rem;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.2);
   scale: 0.9;
@@ -242,7 +242,7 @@ a:hover {
   }
   .emptyCircle {
     width: 9.5rem;
-    height: 9.5rem;
+    height: 9.8rem;
   }
   .stick {
     height: 1.5rem;
