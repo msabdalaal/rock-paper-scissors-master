@@ -85,7 +85,7 @@ let choose = (id) => {
       }
     }
     if (finalResult.innerHTML == "You Lose") {
-      if (score.innerHTML == 0) {
+      if (score.innerHTML <= 0) {
         score.innerHTML = 0;
       } else {
         window.localStorage.setItem(
