@@ -61,8 +61,6 @@ header h1 {
   z-index: 2;
   width: 7rem;
   height: 7rem;
-  aspect-ratio: 1 / 1;
-  aspect-ratio: 1;
   background: radial-gradient(
     circle at top,
     hsl(230, 89%, 62%) 0%,
@@ -93,7 +91,7 @@ header h1 {
 .innerCircle {
   background-color: white;
   width: 78%;
-  aspect-ratio: 1/1;
+  height: 78%;
   box-shadow: inset 0px 0.5rem 0.1rem -0.1rem rgba(0, 0, 0, 0.2);
 }
 .rowOne {
@@ -115,20 +113,20 @@ header h1 {
   width: 60%;
   height: 1rem;
   background-color: rgba(0, 0, 0, 0.2);
-  right: 50%;
-  transform: translate(50%, -50%);
+  right: 25%;
+  /* transform: translate(50%, -50%); */
   top: 50%;
   z-index: 1;
 }
 .stick.right {
   top: 100%;
-  right: 30%;
-  transform: translate(50%, -50%) rotate(-60deg);
+  right: 25%;
+  transform: translate(50%, -50%) rotate(-50deg);
 }
 .stick.left {
   top: 100%;
-  left: -30%;
-  transform: translate(50%, -50%) rotate(60deg);
+  left: -35%;
+  transform: translate(50%, -50%) rotate(50deg);
 }
 /*Result*/
 .result {
@@ -247,6 +245,20 @@ a:hover {
   .circle {
     width: 10rem;
     height: 10rem;
+  }
+  .stick{
+  height: 1.5rem;
+    
+  }
+  .stick.right {
+    top: 100%;
+    right: 30%;
+    transform: translate(50%, -50%) rotate(-50deg);
+  }
+  .stick.left {
+    top: 100%;
+    left: -30%;
+    transform: translate(50%, -50%) rotate(50deg);
   }
   .rulesList {
     width: 30rem;
