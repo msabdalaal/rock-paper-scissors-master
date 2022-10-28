@@ -139,12 +139,6 @@ header h1 {
   background-color: rgba(0, 0, 0, 0.2);
   scale: 0.9;
 }
-.choice {
-  width: 40%;
-}
-.choice .circle {
-  width: 100%;
-}
 .resultText {
   display: flex;
   justify-content: space-between;
