@@ -13,6 +13,7 @@
   margin: 0;
   padding: 0;
   letter-spacing: 0.1rem;
+  /* border: 1px solid white; */
 }
 a {
   text-decoration: none;
@@ -27,7 +28,6 @@ body {
     hsl(237, 49%, 15%) 100%
   );
   height: 100vh;
-  width: 100vw;
   max-height: 100vh;
   padding: 2rem;
 }
@@ -132,6 +132,9 @@ header h1 {
 .result {
   width: 100%;
 }
+.result .circle:hover {
+  cursor: default;
+}
 .emptyCircle {
   width: 6.8rem;
   height: 6.8rem;
@@ -150,6 +153,7 @@ header h1 {
   font-size: 1.1rem;
   font-weight: normal;
   margin: 0;
+  margin-top: 1rem;
 }
 .resultText h2:nth-child(2) {
   transform: translateX(15%);
@@ -209,6 +213,69 @@ a:hover {
 .close:hover {
   cursor: pointer;
 }
+.shadowOne {
+  z-index: -3;
+}
+.shadow1 {
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  top: -0.5rem;
+  right: -0.5rem;
+  border-radius: 50%;
+  z-index: -3;
+}
+.shadow2 {
+  position: absolute;
+  width: 9rem;
+  height: 9rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  top: -1rem;
+  right: -1rem;
+  border-radius: 50%;
+  z-index: -3;
+}
+.shadow3 {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  top: -1.5rem;
+  right: -1.5rem;
+  border-radius: 50%;
+  z-index: -3;
+}
+.shadow4 {
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  top: -0.5rem;
+  left: -0.5rem;
+  border-radius: 50%;
+  z-index: -2;
+}
+.shadow5 {
+  position: absolute;
+  width: 9rem;
+  height: 9rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  top: -1rem;
+  left: -1rem;
+  border-radius: 50%;
+  z-index: -2;
+}
+.shadow6 {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  top: -1.5rem;
+  left: -1.5rem;
+  border-radius: 50%;
+  z-index: -2;
+}
 @media screen and (min-width: 768px) {
   main {
     max-width: 70vw;
@@ -265,5 +332,61 @@ a:hover {
     right: 50%;
     transform: translate(50%, -50%);
     border-radius: 0.5rem;
+  }
+  .shadow1 {
+    position: absolute;
+    width: 12rem;
+    height: 12rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    top: -1rem;
+    right: -1rem;
+    border-radius: 50%;
+  }
+  .shadow2 {
+    position: absolute;
+    width: 14rem;
+    height: 14rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    top: -2rem;
+    right: -2rem;
+    border-radius: 50%;
+  }
+  .shadow3 {
+    position: absolute;
+    width: 16rem;
+    height: 16rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    top: -3rem;
+    right: -3rem;
+    border-radius: 50%;
+    z-index: -2;
+  }
+  .shadow4 {
+    position: absolute;
+    width: 12rem;
+    height: 12rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    top: -1rem;
+    left: -1rem;
+    border-radius: 50%;
+  }
+  .shadow5 {
+    position: absolute;
+    width: 14rem;
+    height: 14rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    top: -2rem;
+    left: -2rem;
+    border-radius: 50%;
+  }
+  .shadow6 {
+    position: absolute;
+    width: 16rem;
+    height: 16rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    top: -3rem;
+    left: -3rem;
+    border-radius: 50%;
+    z-index: -2;
   }
 }

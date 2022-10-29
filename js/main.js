@@ -84,6 +84,8 @@ let choose = (id) => {
           break;
       }
     }
+    let shadowOne = document.querySelector(".shadowOne");
+    let shadowTwo = document.querySelector(".shadowTwo");
     if (finalResult.innerHTML == "You Lose") {
       if (score.innerHTML <= 0) {
         score.innerHTML = 0;
@@ -94,6 +96,7 @@ let choose = (id) => {
         );
         score.innerHTML = window.localStorage.getItem("score");
       }
+      shadowOne.classList.remove("hide");
     }
     if (finalResult.innerHTML == "You Win") {
       window.localStorage.setItem(
@@ -101,6 +104,7 @@ let choose = (id) => {
         `${+window.localStorage.getItem("score") + 1}`
       );
       score.innerHTML = window.localStorage.getItem("score");
+      shadowTwo.classList.remove("hide");
     }
   }, 1000);
 };
@@ -117,6 +121,8 @@ let reset = () => {
   for (let i = 0; i < choice.children.length; i++) {
     choice.children[i].classList.add("hide");
   }
+  shadowTwo.classList.add("hide");
+  shadowOne.classList.add("hide");
 };
 let rulesList = document.querySelector(".rulesList");
 let dimmer = document.querySelector(".dimmer");
