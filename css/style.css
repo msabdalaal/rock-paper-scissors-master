@@ -37,7 +37,6 @@ main {
 }
 header {
   border: 0.2rem solid hsl(217, 16%, 45%);
-  width: 90%;
   z-index: 1;
 }
 header h1 {
