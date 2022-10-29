@@ -38,6 +38,7 @@ main {
 header {
   border: 0.2rem solid hsl(217, 16%, 45%);
   width: 90%;
+  z-index: 1;
 }
 header h1 {
   line-height: 1.1rem;
@@ -341,6 +342,7 @@ a:hover {
     top: -1rem;
     right: -1rem;
     border-radius: 50%;
+    z-index: -100;
   }
   .shadow2 {
     position: absolute;
