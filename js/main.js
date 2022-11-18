@@ -8,7 +8,6 @@ let final = document.querySelector(".finalResult");
 let score = document.getElementById("score");
 
 let choices = ["paperRes", "scissorsRes", "rockRes"];
-let index = Math.floor(Math.random() * choices.length);
 
 score.innerHTML = window.localStorage.getItem("score");
 if (score.innerHTML == "") {
@@ -17,7 +16,7 @@ if (score.innerHTML == "") {
 let choose = (id) => {
   game.classList.add("hide");
   result.classList.remove("hide");
-
+  let index = Math.floor(Math.random() * choices.length);
   for (let i = 0; i <= 2; i++) {
     reschoice[i].classList.add("hide");
   }
